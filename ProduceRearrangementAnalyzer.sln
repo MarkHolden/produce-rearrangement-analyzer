@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31717.71
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProduceRearrangementAnalyzer", "ProduceRearrangementAnalyzer\ProduceRearrangementAnalyzer.vcxproj", "{55E74C16-65CD-4A92-9526-8C84955573AD}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProduceRearrangementAnalyzer.Tests", "ProduceRearrangementAnalyzer.Tests\ProduceRearrangementAnalyzer.Tests.vcxproj", "{5AEB558F-F041-48A1-84DF-6725D85613C0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02D0B1BF-2706-45F6-BE0A-CDB5F212326F}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
@@ -29,14 +27,6 @@ Global
 		{55E74C16-65CD-4A92-9526-8C84955573AD}.Release|x64.Build.0 = Release|x64
 		{55E74C16-65CD-4A92-9526-8C84955573AD}.Release|x86.ActiveCfg = Release|Win32
 		{55E74C16-65CD-4A92-9526-8C84955573AD}.Release|x86.Build.0 = Release|Win32
-		{5AEB558F-F041-48A1-84DF-6725D85613C0}.Debug|x64.ActiveCfg = Debug|x64
-		{5AEB558F-F041-48A1-84DF-6725D85613C0}.Debug|x64.Build.0 = Debug|x64
-		{5AEB558F-F041-48A1-84DF-6725D85613C0}.Debug|x86.ActiveCfg = Debug|Win32
-		{5AEB558F-F041-48A1-84DF-6725D85613C0}.Debug|x86.Build.0 = Debug|Win32
-		{5AEB558F-F041-48A1-84DF-6725D85613C0}.Release|x64.ActiveCfg = Release|x64
-		{5AEB558F-F041-48A1-84DF-6725D85613C0}.Release|x64.Build.0 = Release|x64
-		{5AEB558F-F041-48A1-84DF-6725D85613C0}.Release|x86.ActiveCfg = Release|Win32
-		{5AEB558F-F041-48A1-84DF-6725D85613C0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
