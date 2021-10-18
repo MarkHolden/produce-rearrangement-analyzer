@@ -23,7 +23,7 @@ void printItemFrequency()
     cout << "Name of the item for which to display frequency: ";
     string searchTerm;
     getline(cin, searchTerm);
-    int count = PythonConnector::callIntFunc("PrintItemFrequency", searchTerm);
+    int count = PythonConnector::callIntFunc("GetItemFrequency", searchTerm);
     cout << "Item: " << searchTerm << "\tQuantity:" << count << endl;
 }
 
@@ -32,7 +32,7 @@ void printItemFrequency()
 /// </summary>
 void printHistogram()
 {
-    PythonConnector::callProcedure("PrintHistogram");
+    PythonConnector::callProcedure("SaveHistogramData");
 }
 
 /// <summary>
