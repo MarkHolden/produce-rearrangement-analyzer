@@ -1,12 +1,8 @@
-import re
-import string
+def PrintHistogram():
+    print("You printed a histogram!")
 
-def PrintSomething():
-    print("Hello from python!")
+def PrintFrequencies():
+    print("You printed the frequency!")
 
-def PrintMe(v):
-    print("You sent me: " + v)
-    return 100;
-
-def SquareValue(v):
-    return v * v    
+def PrintItemFrequency(searchTerm: str):
+    print("You printed the frequency of", searchTerm + ".")
