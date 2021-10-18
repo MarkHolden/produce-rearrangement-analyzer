@@ -141,6 +141,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Menu.cpp" />
     <ClCompile Include="ProduceRearrangementAnalyzer.cpp" />
     <ClCompile Include="PythonConnector.cpp" />
   </ItemGroup>
@@ -163,6 +164,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Menu.h" />
     <ClInclude Include="PythonConnector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

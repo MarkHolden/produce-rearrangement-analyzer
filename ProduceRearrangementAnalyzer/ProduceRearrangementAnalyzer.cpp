@@ -3,6 +3,7 @@
 #include <Windows.h>
 #include <cmath>
 #include "PythonConnector.h"
+#include "Menu.h"
 
 using namespace std;
 
@@ -12,7 +13,24 @@ using namespace std;
 /// <returns>Exit code</returns>
 int main()
 {
-	PythonConnector::callProcedure("PrintSomething");
-	cout << PythonConnector::callIntFunc("SquareValue", 2);
+    Menu menu{};
+    while (!menu.IsExit())
+    {
+        switch (menu.GetMenuSelection())
+        {
+        case '1':
+            PythonConnector::callProcedure("PrintFrequencies");
+            break;
+        case '2':
+            PythonConnector::callProcedure("PrintItemFrequency", "banana");
+            break;
+        case '3':
+            PythonConnector::callProcedure("PrintHistogram");
+            break;
+        default:
+            break;
+        }
+    }
+
 	return 0;
 }
