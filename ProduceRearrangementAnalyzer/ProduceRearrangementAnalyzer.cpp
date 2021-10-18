@@ -7,11 +7,17 @@
 
 using namespace std;
 
+/// <summary>
+/// Displays produce frequencies.
+/// </summary>
 void printFrequencies()
 {
     PythonConnector::callProcedure("PrintFrequencies");
 }
 
+/// <summary>
+/// Prompts the user for a search term and displays the frequency for that produce.
+/// </summary>
 void printItemFrequency()
 {
     cout << "Name of the item for which to display frequency: ";
@@ -21,6 +27,9 @@ void printItemFrequency()
     cout << "Item: " << searchTerm << "\tQuantity:" << count << endl;
 }
 
+/// <summary>
+/// Displays a histogram for produce frequencies.
+/// </summary>
 void printHistogram()
 {
     PythonConnector::callProcedure("PrintHistogram");
