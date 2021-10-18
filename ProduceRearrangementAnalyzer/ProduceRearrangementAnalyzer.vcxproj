@@ -149,6 +149,11 @@
     <Text Include="ProduceInput.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ProduceInput.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="PythonCode.py">
       <FileType>Document</FileType>
     </None>
