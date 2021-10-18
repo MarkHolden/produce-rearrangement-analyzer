@@ -26,7 +26,7 @@ void PythonConnector::callProcedure(string procedureName, string param)
 	callPythonFunc(procedureName, param);
 }
 
-void PythonConnector::callProcedure(std::string procedureName)
+void PythonConnector::callProcedure(string procedureName)
 {
 	callPythonFunc(procedureName);
 }
@@ -57,7 +57,7 @@ PyObject* PythonConnector::callPythonFunc(string procedureName, string param)
 PyObject* PythonConnector::getPythonValueString(string param)
 {
 	char* paramVal = new char[param.length() + 1];
-	std::strcpy(paramVal, param.c_str());
+	strcpy(paramVal, param.c_str());
 
 	PyObject* pValue = Py_BuildValue("(s)", paramVal);
 	PyErr_Print();
@@ -67,7 +67,7 @@ PyObject* PythonConnector::getPythonValueString(string param)
 	return pValue;
 }
 
-PyObject* PythonConnector::callPythonFunc(std::string procedureName)
+PyObject* PythonConnector::callPythonFunc(string procedureName)
 {
 	PyObject* pFunction = getPythonFunction(procedureName);
 
@@ -80,7 +80,7 @@ PyObject* PythonConnector::callPythonFunc(std::string procedureName)
 PyObject* PythonConnector::getPythonFunction(string procedureName)
 {
 	char* procName = new char[procedureName.length() + 1];
-	std::strcpy(procName, procedureName.c_str());
+	strcpy(procName, procedureName.c_str());
 
 	Py_Initialize();
 	PyObject* pModule = PyImport_ImportModule("PythonCode");
