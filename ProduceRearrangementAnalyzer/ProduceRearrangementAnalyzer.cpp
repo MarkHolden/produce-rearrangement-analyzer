@@ -11,6 +11,8 @@
 #include <cmath>
 #include "PythonConnector.h"
 #include "Menu.h"
+#include <fstream>
+#include <iomanip>
 
 using namespace std;
 
@@ -35,11 +37,35 @@ void printItemFrequency()
 }
 
 /// <summary>
+/// Displays the characters for the histogram in a fun way.
+/// </summary>
+void printRainbowSpecialCharacters(int count)
+{
+    HANDLE h = GetStdHandle(STD_OUTPUT_HANDLE); // Handle for standard output.
+    for (unsigned int i = 0; i < count; ++i)
+    {
+        SetConsoleTextAttribute(h, i + 1); // skip 0 becase it's black, so you can't see it.
+        cout << "#";
+    }
+    SetConsoleTextAttribute(h, 15);             // Sets console output color back to white.
+}
+
+/// <summary>
 /// Displays a histogram for produce frequencies.
 /// </summary>
 void printHistogram()
 {
     PythonConnector::callProcedure("SaveHistogramData");
+
+    ifstream infile("frequency.dat");
+    string name;
+    int freq;
+    while (infile >> name >> freq)
+    {
+        cout << std::setw(14) << left << name;
+        printRainbowSpecialCharacters(freq);
+        cout << endl;
+    }
 }
 
 /// <summary>
