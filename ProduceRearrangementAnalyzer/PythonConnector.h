@@ -6,7 +6,7 @@ class PythonConnector
 {
 public:
     /// <summary>
-    /// To call this function, pass the name of the Python function you wish to call and the string parameter you want to send.
+    /// To call this function, pass the name of the Python function you wish to call and the int parameter you want to send.
     /// <para>Example: int x = callIntFunc("DoubleValue", 5);</para>
     /// <para>Output: Python will return 10.</para>
     /// </summary>
