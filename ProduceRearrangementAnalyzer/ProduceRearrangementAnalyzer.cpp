@@ -7,6 +7,24 @@
 
 using namespace std;
 
+void printFrequencies()
+{
+    PythonConnector::callProcedure("PrintFrequencies");
+}
+
+void printItemFrequency()
+{
+    int count = PythonConnector::callIntFunc("PrintItemFrequency", "banana");
+    cout << "Item: " << "banana" << "\tQuantity:" << count << endl;
+    count = PythonConnector::callIntFunc("PrintItemFrequency", "Apples");
+    cout << "Item: " << "Apples" << "\tQuantity:" << count << endl;
+}
+
+void printHistogram()
+{
+    PythonConnector::callProcedure("PrintHistogram");
+}
+
 /// <summary>
 /// Main entry point for the application.
 /// </summary>
@@ -19,13 +37,13 @@ int main()
         switch (menu.GetMenuSelection())
         {
         case '1':
-            PythonConnector::callProcedure("PrintFrequencies");
+            printFrequencies();
             break;
         case '2':
-            PythonConnector::callProcedure("PrintItemFrequency", "banana");
+            printItemFrequency();
             break;
         case '3':
-            PythonConnector::callProcedure("PrintHistogram");
+            printHistogram();
             break;
         default:
             break;
