@@ -16,6 +16,11 @@ void PythonConnector::callProcedure(string procedureName, int param)
 	callPythonFunc(procedureName, param);
 }
 
+void PythonConnector::callProcedure(string procedureName, string param)
+{
+	callPythonFunc(procedureName, param);
+}
+
 void PythonConnector::callProcedure(std::string procedureName)
 {
 	callPythonFunc(procedureName);
@@ -32,6 +37,29 @@ PyObject* PythonConnector::callPythonFunc(string procedureName, int param)
 	Py_Finalize();
 
 	return pResult;
+}
+
+PyObject* PythonConnector::callPythonFunc(string procedureName, string param)
+{
+	PyObject* pFunction = getPythonFunction(procedureName);
+	PyObject* pValue = getPythonValueString(param);
+	PyObject* pResult = PyObject_CallObject(pFunction, pValue);
+	Py_Finalize();
+
+	return pResult;
+}
+
+PyObject* PythonConnector::getPythonValueString(string param)
+{
+	char* paramVal = new char[param.length() + 1];
+	std::strcpy(paramVal, param.c_str());
+
+	PyObject* pValue = Py_BuildValue("(s)", paramVal);
+	PyErr_Print();
+
+	delete[] paramVal;
+
+	return pValue;
 }
 
 PyObject* PythonConnector::callPythonFunc(std::string procedureName)
