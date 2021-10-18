@@ -16,6 +16,16 @@ public:
     static int callIntFunc(std::string procedureName, int param);
 
     /// <summary>
+    /// To call this function, pass the name of the Python function you wish to call and the string parameter you want to send.
+    /// <para>Example: int x = callIntFunc("PrintItemFrequency", "Apples");</para>
+    /// <para>Output: Python will return 10.</para>
+    /// </summary>
+    /// <param name="procedureName">Name of the procedure to call.</param>
+    /// <param name="param">String parameter required by the procedure.</param>
+    /// <returns>Integer response from Python function.</returns>
+    static int callIntFunc(std::string procedureName, std::string param);
+
+    /// <summary>
     /// To call this function, simply pass the function name in Python that you wish to call and the int param it requires.
     /// <para>Example: callProcedure("MultiplicationTable", 6);</para>
     /// <para>Output: Python will print the multiplication table for 6 on the screen.</para>

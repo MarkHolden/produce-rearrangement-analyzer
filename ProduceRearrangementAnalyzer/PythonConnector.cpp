@@ -11,6 +11,11 @@ int PythonConnector::callIntFunc(string procedureName, int param)
 	return _PyLong_AsInt(callPythonFunc(procedureName, param));
 }
 
+int PythonConnector::callIntFunc(string procedureName, string param)
+{
+	return _PyLong_AsInt(callPythonFunc(procedureName, param));
+}
+
 void PythonConnector::callProcedure(string procedureName, int param)
 {
 	callPythonFunc(procedureName, param);
