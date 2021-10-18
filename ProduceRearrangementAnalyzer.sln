@@ -7,6 +7,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProduceRearrangementAnalyze
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ProduceRearrangementAnalyzer.Tests", "ProduceRearrangementAnalyzer.Tests\ProduceRearrangementAnalyzer.Tests.vcxproj", "{5AEB558F-F041-48A1-84DF-6725D85613C0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{02D0B1BF-2706-45F6-BE0A-CDB5F212326F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
