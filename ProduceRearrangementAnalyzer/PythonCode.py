@@ -1,3 +1,11 @@
+# *****************************************
+#
+# Author: Mark Holden
+# Date: 10/18/2021
+# CS-210-R1971 Programming Languages 21EW1
+# 
+# *****************************************
+
 def SaveHistogramData():
     """Saves Histogram data to frequency.dat file in the format:
     Peaches 5

@@ -1,3 +1,11 @@
+// *****************************************
+// 
+// Author: Mark Holden
+// Date: 10/18/2021
+// CS-210-R1971 Programming Languages 21EW1
+// 
+// *****************************************
+
 #include "PythonConnector.h"
 #include <Python.h>
 #include <iostream>

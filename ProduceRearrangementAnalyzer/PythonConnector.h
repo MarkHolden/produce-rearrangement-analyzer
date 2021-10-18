@@ -1,3 +1,11 @@
+// *****************************************
+// 
+// Author: Mark Holden
+// Date: 10/18/2021
+// CS-210-R1971 Programming Languages 21EW1
+// 
+// *****************************************
+
 #pragma once
 #include <Python.h>
 #include <string>
