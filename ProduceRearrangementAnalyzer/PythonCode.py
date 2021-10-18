@@ -19,14 +19,14 @@ def SaveHistogramData():
 
 def PrintFrequencies():
     """Prints the Frequencies of all produce items in the format:
-    Item: Peaches           Quantity: 5
-    Item: Apples             Quantity: 4
-    Item: Radishes          Quantity: 3
+    Item: Peaches        Quantity: 5
+    Item: Apples          Quantity: 4
+    Item: Radishes       Quantity: 3
     """
 
     print("\nProduce Item Frequencies")
     for k, v in sorted(GetProduceDict().items(), key=lambda x: x[1], reverse=True):
-        print("Item:", f'{k:16}', "\tQuantity:", v)
+        print("Item:", f'{k:14}', "Quantity:", v)
 
 def GetItemFrequency(searchTerm: str) -> int:
     """Gets the freqency of an item by name.
