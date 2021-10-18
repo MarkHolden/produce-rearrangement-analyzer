@@ -6,6 +6,9 @@ def PrintFrequencies():
     for k, v in sorted(GetProduceDict().items(), key=lambda x: x[1], reverse=True):
         print("Item:", f'{k:16}', "\tQuantity:", v)
 
+def PrintItemFrequency(searchTerm: str) -> int:
+    produceDict = GetProduceDict()
+    return produceDict[searchTerm] if searchTerm in produceDict else 0
 
 def GetProduceDict() -> dict:
     produceList = open("ProduceInput.txt")
